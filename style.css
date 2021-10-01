@@ -1,8 +1,16 @@
 body{
-    background-color: aqua;
+    background-color: #FF968A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .maincontainer{
+    padding: 100px 200px 200px 200px;
+    box-shadow: black;
     height:600px;
     width: 600px;
     display: grid;
@@ -13,5 +21,13 @@ body{
 .gridcell{
     padding: 0;
     margin: 0;
-    border: solid 2px black;
+    border: solid 1px rgb(192, 192, 192);
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
 }

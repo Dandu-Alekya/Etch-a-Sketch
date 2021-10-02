@@ -1,25 +1,35 @@
+
+
+
 const main = document.querySelector(".maincontainer");
 const random = document.querySelector("#random");
 const eraser = document.querySelector("#erase");
 const clear = document.querySelector("#clear");
 const gradient = document.querySelector("#gradient")
 let usercolor = document.querySelector("#colorpicker");
+let currentsize= document.querySelector("#slider");
 
-
-let currentsize=16;
+let startsize=16;
 let mode="userpick";
 let color;
 
-clear.onclick= () => actclear;
+clear.onclick= () => actclear();
 random.onclick = () => changemode("random");
 eraser.onclick= () => changemode("erase");
 gradient.onclick= () => changemode("gradient");
 usercolor.onchange= (e) => changemode("userpick");
-  
+currentsize.onchange=(e) => changesize(e.target.value);
+
+function changesize(newsize){
+    let x= document.querySelector("#size");
+    x.textContent="GRID: "+newsize + " X " + newsize;
+    startsize=newsize;
+    actclear();
+    
+}
 
 function changemode(selectedmode){
     mode=selectedmode;
-    alert("changed"+mode);
     changecolor;
 }
 
@@ -28,7 +38,7 @@ function actclear(){
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
     }
-    defaultGrid(currentsize);
+    defaultGrid(startsize);
 }
 
 function defaultGrid(size){
@@ -51,7 +61,7 @@ function changecolor(e){
         e.target.style.backgroundColor= bgColor;
     }
     else if(mode === "gradient"){ 
-              
+
     }
     else if(mode === "erase"){
         e.target.style.backgroundColor="#FFFFFF";
@@ -63,4 +73,4 @@ function changecolor(e){
     }
 }
 
-defaultGrid(currentsize)
+defaultGrid(startsize)

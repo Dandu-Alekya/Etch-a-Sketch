@@ -11,3 +11,5 @@ https://dandu-alekya.github.io/Etch-a-Sketch/
 4. Change me: User can pick the color and fill the grid
 5. Grid size range: Changes the grids size according to the selected mesurements.
 
+#### Topics Learnt 
+1. DOM manipulation

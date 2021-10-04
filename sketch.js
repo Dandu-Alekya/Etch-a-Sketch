@@ -1,11 +1,9 @@
-
-
-
 const main = document.querySelector(".maincontainer");
 const random = document.querySelector("#random");
 const eraser = document.querySelector("#erase");
 const clear = document.querySelector("#clear");
-const gradient = document.querySelector("#gradient")
+const pastel = document.querySelector("#pastel")
+const toggle = document.querySelector("#toggle");
 let usercolor = document.querySelector("#colorpicker");
 let currentsize= document.querySelector("#slider");
 
@@ -17,6 +15,8 @@ clear.onclick= () => actclear();
 random.onclick = () => changemode("random");
 eraser.onclick= () => changemode("erase");
 gradient.onclick= () => changemode("gradient");
+toggle.onclick= () => addgridlines();
+
 usercolor.onchange= (e) => changemode("userpick");
 currentsize.onchange=(e) => changesize(e.target.value);
 
@@ -27,7 +27,24 @@ function changesize(newsize){
     actclear();
     
 }
+let x=0;
+function addgridlines(){
+    let lines = document.getElementsByClassName("gridcell");
+    if(x===0){
+    for (let i=0; i < lines.length; i++) {
+        lines[i].style.border="solid 1px rgb(192, 192, 192)";
+        x=1;
+        }
+    }
+    else{
+        for (let i=0; i < lines.length; i++) {
+            lines[i].style.border="none";
+            x=0;
+            }
 
+    }
+
+}
 function changemode(selectedmode){
     mode=selectedmode;
     changecolor;

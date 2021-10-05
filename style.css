@@ -83,6 +83,7 @@ button:hover{
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
+
 .gridcell{
     padding: 0;
     margin: 0;

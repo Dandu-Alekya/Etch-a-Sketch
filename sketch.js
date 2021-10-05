@@ -14,7 +14,7 @@ let color;
 clear.onclick= () => actclear();
 random.onclick = () => changemode("random");
 eraser.onclick= () => changemode("erase");
-gradient.onclick= () => changemode("gradient");
+pastel.onclick= () => changemode("pastel");
 toggle.onclick= () => addgridlines();
 
 usercolor.onchange= (e) => changemode("userpick");
@@ -77,7 +77,9 @@ function changecolor(e){
         let  bgColor = "rgb(" + x + "," + y + "," + z + ")";
         e.target.style.backgroundColor= bgColor;
     }
-    else if(mode === "gradient"){ 
+    else if(mode === "pastel"){
+        let pastels=['#A1E2D2','#CCF1DE','#ECF3DC','#F5E3D7','#E1D3EF','#B7C6E6'];
+        e.target.style.backgroundColor= pastels[Math.floor(Math.random()*pastels.length)];
 
     }
     else if(mode === "erase"){

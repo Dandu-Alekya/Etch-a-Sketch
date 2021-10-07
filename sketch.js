@@ -72,13 +72,14 @@ function defaultGrid(size){
 function changecolor(e){
     if(mode === "random"){
         let x = Math.floor(Math.random() * 256);
-        let y = 100 + Math.floor(Math.random() * 256);
-        let z = 50 + Math.floor(Math.random() * 256);
+        let y = Math.floor(Math.random() * 256);
+        let z = Math.floor(Math.random() * 256);
         let  bgColor = "rgb(" + x + "," + y + "," + z + ")";
         e.target.style.backgroundColor= bgColor;
     }
     else if(mode === "pastel"){
-        let pastels=['#A1E2D2','#CCF1DE','#ECF3DC','#F5E3D7','#E1D3EF','#B7C6E6'];
+        let pastels=['#A1E2D2','#CCF1DE','#ECF3DC','#F5E3D7','#E1D3EF','#B7C6E6','#ffb3ba','#ffdfba','#ffffba',
+                     '#baffc9','#bae1ff','#abc4ff','#e8dff5', '#fce1e4', '#fcf4dd', '#ddedea','#daeaf6'];
         e.target.style.backgroundColor= pastels[Math.floor(Math.random()*pastels.length)];
 
     }

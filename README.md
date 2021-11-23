@@ -11,3 +11,7 @@ https://dandu-alekya.github.io/Etch-a-Sketch/
 4. Erazer: Acts like an erazer and removes the background color of the grid cell.
 5. Change me: User can pick the color and fill the grid
 6. Grid size range: Changes the grids size according to the selected mesurements.
+
+### Project Image
+
+![image](https://user-images.githubusercontent.com/69137526/137078065-f2294cc0-7b93-4aae-83f4-bd305e8a29df.png)
